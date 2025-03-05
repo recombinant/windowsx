@@ -5,6 +5,6 @@ pub fn build(b: *std.Build) void {
         .root_source_file = b.path("windowsx.zig"),
     }).addImport(
         "win32",
-        b.dependency("win32", .{}).module("win32"),
+        b.dependency("zigwin32", .{}).module("win32"),
     );
 }

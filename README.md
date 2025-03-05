@@ -1,4 +1,6 @@
 # windowsx
 Zig port of windowsx.h
 
-2025/01/06 Incomplete. Additions made whenever they can be tested.
+Incomplete. Additions made whenever they can be tested.
+
+**2025/03/05** `build.zig` and `build.zig.zon` Updated to work with Zig 0.14.0
