@@ -14,7 +14,7 @@ const HBRUSH = win32.HBRUSH;
 const HPEN = win32.HPEN;
 const HFONT = win32.HFONT;
 const HKL = win32.HKL;
-const CREATESTRUCT = win32.CREATESTRUCT;
+const CREATESTRUCTW = win32.CREATESTRUCTW;
 const VIRTUAL_KEY = win32.VIRTUAL_KEY;
 const SYSTEM_PARAMETERS_INFO_ACTION = win32.SYSTEM_PARAMETERS_INFO_ACTION;
 const DRAWITEMSTRUCT = win32.DRAWITEMSTRUCT;
@@ -100,7 +100,7 @@ const forwarder_type = *const fn (hWnd: ?HWND, msg: u32, wParam: WPARAM, lParam:
 // pub fn OnCreate(self: *T, hwnd: HWND, cs: *CREATESTRUCT) LRESULT
 pub fn HANDLE_WM_CREATE(hwnd: HWND, _: WPARAM, lParam: LPARAM, comptime T: type, handler: *T) LRESULT {
     const L = packed struct {
-        createstruct: *CREATESTRUCT,
+        createstruct: *CREATESTRUCTW,
     };
     const crackedL: *const L = @ptrCast(&lParam);
     // TODO: There is probably a better way of handling the return success/fail.
