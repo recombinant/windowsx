@@ -1,11 +1,5 @@
 // Message Crackers as per the original <windowsx.h>
-const win32 = struct {
-    usingnamespace @import("win32").zig;
-    usingnamespace @import("win32").foundation;
-    usingnamespace @import("win32").graphics.gdi;
-    usingnamespace @import("win32").ui.windows_and_messaging;
-    usingnamespace @import("win32").ui.input.keyboard_and_mouse;
-};
+const win32 = @import("win32").everything;
 const BOOL = win32.BOOL;
 const TRUE = win32.TRUE;
 const FALSE = win32.FALSE;
@@ -100,8 +94,7 @@ pub fn GetStockFont(hbrush: win32.GET_STOCK_OBJECT_FLAGS) ?HFONT {
 
 // ----------------------------------------------------------------------------
 
-const WINAPI = @import("std").os.windows.WINAPI;
-const forwarder_type = *const fn (hWnd: ?HWND, msg: u32, wParam: WPARAM, lParam: LPARAM) callconv(WINAPI) LRESULT;
+const forwarder_type = *const fn (hWnd: ?HWND, msg: u32, wParam: WPARAM, lParam: LPARAM) callconv(.winapi) LRESULT;
 
 // 0x0001 WM_CREATE
 // pub fn OnCreate(self: *T, hwnd: HWND, cs: *CREATESTRUCT) LRESULT
