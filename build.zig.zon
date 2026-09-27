@@ -1,14 +1,14 @@
 .{
     .name = .windowsx,
-    .version = "0.0.5",
+    .version = "0.0.6",
     .fingerprint = 0xebe2bbca54e8932e, // Changing this has security and trust implications.
-    .minimum_zig_version = "0.15.2",
+    .minimum_zig_version = "0.16.0",
 
     // zig fetch --save "git+https://github.com/marlersoft/zigwin32"
     .dependencies = .{
-        .zigwin32 = .{
-            .url = "git+https://github.com/marlersoft/zigwin32#5587b16fa040573846a6bf531301f6206d31a6bf",
-            .hash = "zigwin32-25.0.28-preview-AAAAAICM5AMResOGQnQ85mfe60TTOQeMtt7GRATUOKoP",
+        .win32 = .{
+            .url = "git+https://github.com/marlersoft/zigwin32#9f15c276b4e9d05afd34a10d8662a7dfc34647ea",
+            .hash = "win32-42.0.39-preview-mX5pFS564gPTezZn4v3TMxRnfJUrZNx1B_F2p2HKXOeG",
         },
     },
     .paths = .{
