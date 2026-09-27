@@ -26,8 +26,8 @@ const win32 = struct {
     const CREATESTRUCTW = mod_root.ui.windows_and_messaging.CREATESTRUCTW;
     const SYSTEM_PARAMETERS_INFO_ACTION = mod_root.ui.windows_and_messaging.SYSTEM_PARAMETERS_INFO_ACTION;
 
-    const GetStockObject = mod_root.graphics.gdi.GetStockObject;
-    const SelectObject = mod_root.graphics.gdi.SelectObject;
+    const GetStockObject = mod_root.gdi32.GetStockObject;
+    const SelectObject = mod_root.gdi32.SelectObject;
 };
 // ----------------------------------------------------------------------------
 // WinNls.h
